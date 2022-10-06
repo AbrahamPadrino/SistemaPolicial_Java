@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     registro_policial.`Nombres` AS registro_policial_Nombres,
+     registro_policial.`Apellidos` AS registro_policial_Apellidos,
+     registro_policial.`Cedula` AS registro_policial_Cedula,
+     registro_policial.`Edad` AS registro_policial_Edad,
+     registro_policial.`FechaN` AS registro_policial_FechaN,
+     registro_policial.`LugarN` AS registro_policial_LugarN,
+     registro_policial.`Nacionalidad` AS registro_policial_Nacionalidad,
+     registro_policial.`EstadoCivil` AS registro_policial_EstadoCivil,
+     registro_policial.`Ocupacion` AS registro_policial_Ocupacion,
+     registro_policial.`LugarResid` AS registro_policial_LugarResid,
+     registro_policial.`NombreMadre` AS registro_policial_NombreMadre,
+     registro_policial.`CondicionM` AS registro_policial_CondicionM,
+     registro_policial.`NombrePadre` AS registro_policial_NombrePadre,
+     registro_policial.`CondicionP` AS registro_policial_CondicionP,
+     registro_policial.`Delito` AS registro_policial_Delito,
+     registro_policial.`FechaD` AS registro_policial_FechaD,
+     registro_policial.`Observacion` AS registro_policial_Observacion,
+     registro_policial.`idfuncionario` AS registro_policial_idfuncionario,
+     registro_policial.`foto` AS registro_policial_foto,
+     registro_personal.`Nombres` AS registro_personal_Nombres,
+     registro_personal.`Apellidos` AS registro_personal_Apellidos,
+     registro_personal.`Cedula` AS registro_personal_Cedula,
+     registro_personal.`Edad` AS registro_personal_Edad,
+     registro_personal.`FechaN` AS registro_personal_FechaN,
+     registro_personal.`LugarN` AS registro_personal_LugarN,
+     registro_personal.`Nacionalidad` AS registro_personal_Nacionalidad,
+     registro_personal.`EstadoCivil` AS registro_personal_EstadoCivil,
+     registro_personal.`Ocupacion` AS registro_personal_Ocupacion,
+     registro_personal.`LugarResid` AS registro_personal_LugarResid,
+     registro_personal.`NombreMadre` AS registro_personal_NombreMadre,
+     registro_personal.`CondicionM` AS registro_personal_CondicionM,
+     registro_personal.`NombrePadre` AS registro_personal_NombrePadre,
+     registro_personal.`CondicionP` AS registro_personal_CondicionP,
+     registro_personal.`idfuncionario` AS registro_personal_idfuncionario
+FROM
+     `registro_policial` registro_policial,
+     `registro_personal` registro_personal]]>
+	</queryString>
+	<field name="registro_policial_Nombres" class="java.lang.String"/>
+	<field name="registro_policial_Apellidos" class="java.lang.String"/>
+	<field name="registro_policial_Cedula" class="java.lang.Integer"/>
+	<field name="registro_policial_Edad" class="java.lang.Integer"/>
+	<field name="registro_policial_FechaN" class="java.lang.String"/>
+	<field name="registro_policial_LugarN" class="java.lang.String"/>
+	<field name="registro_policial_Nacionalidad" class="java.lang.String"/>
+	<field name="registro_policial_EstadoCivil" class="java.lang.String"/>
+	<field name="registro_policial_Ocupacion" class="java.lang.String"/>
+	<field name="registro_policial_LugarResid" class="java.lang.String"/>
+	<field name="registro_policial_NombreMadre" class="java.lang.String"/>
+	<field name="registro_policial_CondicionM" class="java.lang.String"/>
+	<field name="registro_policial_NombrePadre" class="java.lang.String"/>
+	<field name="registro_policial_CondicionP" class="java.lang.String"/>
+	<field name="registro_policial_Delito" class="java.lang.String"/>
+	<field name="registro_policial_FechaD" class="java.lang.String"/>
+	<field name="registro_policial_Observacion" class="java.lang.String"/>
+	<field name="registro_policial_idfuncionario" class="java.lang.String"/>
+	<field name="registro_policial_foto" class="java.lang.Object"/>
+	<field name="registro_personal_Nombres" class="java.lang.String"/>
+	<field name="registro_personal_Apellidos" class="java.lang.String"/>
+	<field name="registro_personal_Cedula" class="java.lang.String"/>
+	<field name="registro_personal_Edad" class="java.lang.String"/>
+	<field name="registro_personal_FechaN" class="java.lang.String"/>
+	<field name="registro_personal_LugarN" class="java.lang.String"/>
+	<field name="registro_personal_Nacionalidad" class="java.lang.String"/>
+	<field name="registro_personal_EstadoCivil" class="java.lang.String"/>
+	<field name="registro_personal_Ocupacion" class="java.lang.String"/>
+	<field name="registro_personal_LugarResid" class="java.lang.String"/>
+	<field name="registro_personal_NombreMadre" class="java.lang.String"/>
+	<field name="registro_personal_CondicionM" class="java.lang.String"/>
+	<field name="registro_personal_NombrePadre" class="java.lang.String"/>
+	<field name="registro_personal_CondicionP" class="java.lang.String"/>
+	<field name="registro_personal_idfuncionario" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="161" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="143" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{registro_policial_Nombres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="0" width="143" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{registro_policial_Apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="0" width="143" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{registro_policial_Cedula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="0" width="143" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{registro_policial_Edad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="57" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{registro_policial_Observacion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

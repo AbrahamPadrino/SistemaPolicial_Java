@@ -1,0 +1,28 @@
+  String regist;
+        String sql = ("");
+        String exp = nom.getText();
+
+        boolean existe = false; //variable bandera para comprobar si NO existe el expediente en la BD
+
+        try {
+            sql = "SELECT * FROM r_miembros WHERE nombre = '" + exp + "'";
+
+            ResultSet rs = sent.executeQuery(sql);
+
+            while (rs.next()) {
+                existe = true;
+                if (existe == true) {
+                    regist = rs.getString("nombre");
+                    if (exp.equals(regist)) {
+                        JOptionPane.showMessageDialog(null, "El expediente: " + regist + " si está en la BD", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                }
+            } //fin while res.next
+            if (existe == false) {
+                JOptionPane.showMessageDialog(null, "El expediente NO está en la base de datos,\nvuelva a capturar el número o reportelo a TI", "Error de captura", JOptionPane.ERROR_MESSAGE);
+            }
+            rs.close();
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
+        }

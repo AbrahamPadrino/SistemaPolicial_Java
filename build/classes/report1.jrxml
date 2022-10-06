@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1"/>
+	<parameter name="CED" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     registro_policial.`Nombres` AS registro_policial_Nombres,
+     registro_policial.`Apellidos` AS registro_policial_Apellidos,
+     registro_policial.`Cedula` AS registro_policial_Cedula,
+     registro_policial.`Edad` AS registro_policial_Edad,
+     registro_policial.`FechaN` AS registro_policial_FechaN,
+     registro_policial.`LugarN` AS registro_policial_LugarN,
+     registro_policial.`Nacionalidad` AS registro_policial_Nacionalidad,
+     registro_policial.`EstadoCivil` AS registro_policial_EstadoCivil,
+     registro_policial.`Ocupacion` AS registro_policial_Ocupacion,
+     registro_policial.`LugarResid` AS registro_policial_LugarResid,
+     registro_policial.`NombreMadre` AS registro_policial_NombreMadre,
+     registro_policial.`CondicionM` AS registro_policial_CondicionM,
+     registro_policial.`NombrePadre` AS registro_policial_NombrePadre,
+     registro_policial.`CondicionP` AS registro_policial_CondicionP,
+     registro_policial.`Delito` AS registro_policial_Delito,
+     registro_policial.`FechaD` AS registro_policial_FechaD,
+     registro_policial.`Observacion` AS registro_policial_Observacion,
+     registro_policial.`idfuncionario` AS registro_policial_idfuncionario,
+     registro_policial.`foto` AS registro_policial_foto,
+     registro_policial.`FechaR` AS registro_policial_FechaR
+FROM
+     `registro_policial` registro_policial
+WHERE
+     registro_policial.`Cedula` = $P{CED}]]>
+	</queryString>
+	<field name="registro_policial_Nombres" class="java.lang.String"/>
+	<field name="registro_policial_Apellidos" class="java.lang.String"/>
+	<field name="registro_policial_Cedula" class="java.lang.String"/>
+	<field name="registro_policial_Edad" class="java.lang.String"/>
+	<field name="registro_policial_FechaN" class="java.lang.String"/>
+	<field name="registro_policial_LugarN" class="java.lang.String"/>
+	<field name="registro_policial_Nacionalidad" class="java.lang.String"/>
+	<field name="registro_policial_EstadoCivil" class="java.lang.String"/>
+	<field name="registro_policial_Ocupacion" class="java.lang.String"/>
+	<field name="registro_policial_LugarResid" class="java.lang.String"/>
+	<field name="registro_policial_NombreMadre" class="java.lang.String"/>
+	<field name="registro_policial_CondicionM" class="java.lang.String"/>
+	<field name="registro_policial_NombrePadre" class="java.lang.String"/>
+	<field name="registro_policial_CondicionP" class="java.lang.String"/>
+	<field name="registro_policial_Delito" class="java.lang.String"/>
+	<field name="registro_policial_FechaD" class="java.lang.String"/>
+	<field name="registro_policial_Observacion" class="java.lang.String"/>
+	<field name="registro_policial_idfuncionario" class="java.lang.String"/>
+	<field name="registro_policial_foto" class="java.lang.Object"/>
+	<field name="registro_policial_FechaR" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="317" splitType="Stretch">
+			<textField>
+				<reportElement x="72" y="110" width="184" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{registro_policial_Nombres}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="112" width="68" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRES:]]></text>
+			</staticText>
+			<image>
+				<reportElement x="1" y="0" width="571" height="66"/>
+				<imageExpression class="java.lang.String"><![CDATA["C:\\Users\\Equipo\\Documents\\SISTEMA POLICIAL - MODIFICADO 26-05\\poli\\src\\img\\img_reporte.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="1" y="76" width="571" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EXPEDIENTE POLICIAL]]></text>
+			</staticText>
+			<line>
+				<reportElement x="3" y="68" width="569" height="1"/>
+			</line>
+			<line>
+				<reportElement x="2" y="97" width="569" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="132" width="68" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[APELLIDOS:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="82" y="130" width="229" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{registro_policial_Apellidos}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="7" y="152" width="53" height="20"/>
+				<textElement>
+					<font size="11" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[CEDULA:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="64" y="151" width="73" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{registro_policial_Cedula}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="7" y="191" width="72" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIRECCION:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="171" width="36" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EDAD:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="210" width="148" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LUGAR DE NACIMEINTO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="149" y="209" width="182" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{registro_policial_LugarN}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="2" y="288" width="569" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="8" y="230" width="148" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA DE NACIMEINTO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="229" width="216" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{registro_policial_FechaN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="331" y="110" width="98" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NACIONALIDAD:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="331" y="128" width="100" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{registro_policial_Nacionalidad}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="333" y="152" width="98" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESTADO CIVIL:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="333" y="171" width="100" height="20"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{registro_policial_EstadoCivil}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="3" y="297" width="104" height="20" backcolor="#CCCCCC"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="191" width="98" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OCUPACION:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="334" y="209" width="100" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{registro_policial_Ocupacion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="250" width="135" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE DE LA MADRE:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="146" y="248" width="145" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{registro_policial_NombreMadre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="299" y="250" width="135" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE DEL PADRE:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="421" y="248" width="153" height="20"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{registro_policial_NombrePadre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="300" y="270" width="135" height="19"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE DE LA MADRE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="269" width="162" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONDICION DE LA MADRE:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="156" y="268" width="134" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{registro_policial_NombreMadre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="269" width="128" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{registro_policial_CondicionP}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="214" y="297" width="271" height="20" backcolor="#CCCCCC"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[DIRECCION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="107" y="297" width="107" height="20" backcolor="#CCCCCC"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[EDAD]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="62" splitType="Stretch">
+			<textField>
+				<reportElement x="107" y="40" width="107" height="21"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{registro_policial_Delito}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="0" width="104" height="60"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{registro_policial_FechaD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="214" y="40" width="271" height="21"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{registro_policial_Observacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="214" y="1" width="271" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{registro_policial_LugarResid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="1" width="107" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{registro_policial_Edad}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="214" y="20" width="271" height="20" backcolor="#CCCCCC"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[OBSERVACIONES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="107" y="20" width="107" height="20" backcolor="#CCCCCC"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[DELITO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="107" y="317" width="107" height="20" backcolor="#CCCCCC"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[EDAD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="214" y="317" width="271" height="20" backcolor="#CCCCCC"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[DIRECCION]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
